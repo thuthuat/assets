@@ -26,7 +26,7 @@ $(document).ready(function() {
         errorconvert: "URL can not to convert",
         emptypass: "Password can not empty",
         wrongpass: "Password is incorrect",
-        countdowntext: "Please Wait <span class='countdown'>{{anascountdown}}</span> Seconds"
+        countdowntext: "Please Wait <span class='countdown fs-3'>{{anascountdown}}</span> Seconds"
       }
     }
       W.validurlit = function (ur) {
@@ -187,7 +187,7 @@ class Tea {
               downloadTimer = setInterval(countDown,1000)
               function countDown(){
                   var ANasRMunDurin = config.lang.countdowntext.replace('{{anascountdown}}', timeleft);
-                  report[0].innerHTML = '<div class="border text-center">' + ANasRMunDurin + '</div>';
+                  report[0].innerHTML = '<div class="fs-6 mb-2 text-center">' + ANasRMunDurin + '</div>';
                   setTimeout(function(){
                     report[0].parentNode.style.height = (report[0].offsetHeight+5)+'px';
                     }, 0);
@@ -247,11 +247,11 @@ class Tea {
           downloadTimer = setInterval(countDown,1000)
           function countDown(){
             var ANasRMunDurin = config.lang.countdowntext.replace('{{anascountdown}}', timeleft);
-            $(config.output)[0].innerHTML = '<div class="border text-center">' + ANasRMunDurin + '</div>';    
+            $(config.output)[0].innerHTML = '<div class="fs-6 mb-2 text-center">' + ANasRMunDurin + '</div>';    
         	timeleft -= 1;
             if(timeleft <= 0){
               clearInterval(downloadTimer);
-              $(config.output)[0].innerHTML = '<button class="text-center">Getlink</button>';
+              $(config.output)[0].innerHTML = '<button type="button" class="btn btn-success mb-2">Getlink</button>';
               if(!config.click2x){
                 $(config.output)[0].innerHTML = '<div class="text-center"><a class="text-center" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
               } else {
