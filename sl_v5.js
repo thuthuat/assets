@@ -194,13 +194,13 @@ class Tea {
                   timeleft -= 1;
                   if(timeleft <= 0){
                     clearInterval(downloadTimer);
-                    report[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
+                    report[0].innerHTML = '<button class="text-center">Getlink</button>';
                     if(!config.click2x){
                       report[0].innerHTML = '<div class="text-center"><a href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                     } else {
                       function gotolinkcountdown() {
                         var o = 4;
-                        $("#gotolink").removeClass("hidden");
+                        $("#gotolink").removeClass("hidden").addClass("mt-2 mb-2");
                         var n = setInterval(function() {
                             var e = o -= 1;
                            $("#gotolink").html('<svg id="i-clock" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"><circle cx="16" cy="16" r="14" /><path d="M16 8 L16 16 20 20" /></svg> Please Wait...'), e < 0 && (clearInterval(n), $("#gotolink").prop("disabled", !1), $("#gotolink").html('<svg id="i-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"><path d="M2 20 L12 28 30 4" /></svg> Go to Link'),$(config.gotolink).click(function(){var o = (data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url; window.open(o,'_blank')}))
@@ -251,7 +251,7 @@ class Tea {
         	timeleft -= 1;
             if(timeleft <= 0){
               clearInterval(downloadTimer);
-              $(config.output)[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
+              $(config.output)[0].innerHTML = '<button class="text-center">Getlink</button>';
               if(!config.click2x){
                 $(config.output)[0].innerHTML = '<div class="text-center"><a class="text-center" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
               } else {
