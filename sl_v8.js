@@ -194,7 +194,7 @@ class Tea {
                   timeleft -= 1;
                   if(timeleft <= 0){
                     clearInterval(downloadTimer);
-                    report[0].innerHTML = '<button class="btngetlink">Getlink</button>';
+                    report[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
                     if(!config.click2x){
                       report[0].innerHTML = '<div class="text-center"><a href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                     } else {
@@ -207,7 +207,7 @@ class Tea {
                         }, 1e3)
                         }
                       var request = !1;
-                      $("#output .text-center").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500);$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                      $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500);$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
                     }
                   }
                 }
@@ -251,7 +251,7 @@ class Tea {
         	timeleft -= 1;
             if(timeleft <= 0){
               clearInterval(downloadTimer);
-              $(config.output)[0].innerHTML = '<button class="btngetlink">Getlink</button>';
+              $(config.output)[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
               if(!config.click2x){
                 $(config.output)[0].innerHTML = '<div class="text-center"><a class="text-center" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
               } else {
@@ -264,7 +264,7 @@ class Tea {
                   }, 1e3)
                 }
                 var request = !1;
-                $("#output .text-center").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500);$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500);$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
               }
             }
           }                         
