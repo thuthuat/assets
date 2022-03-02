@@ -26,7 +26,7 @@ $(document).ready(function() {
         errorconvert: "URL can not to convert",
         emptypass: "Password can not empty",
         wrongpass: "Password is incorrect",
-        countdowntext: "Please Wait <span class='countdown fs-3'>{{anascountdown}}</span> Seconds"
+        countdowntext: "Please Wait <span class='countdown fs-3 text-danger'>{{anascountdown}}</span> Seconds"
       }
     }
       W.validurlit = function (ur) {
@@ -187,7 +187,7 @@ class Tea {
               downloadTimer = setInterval(countDown,1000)
               function countDown(){
                   var ANasRMunDurin = config.lang.countdowntext.replace('{{anascountdown}}', timeleft);
-                  report[0].innerHTML = '<div class="fs-6 mb-2 text-center">' + ANasRMunDurin + '</div>';
+                  report[0].innerHTML = '<div class="fs-6 mb-2 text-center text-success">' + ANasRMunDurin + '</div>';
                   setTimeout(function(){
                     report[0].parentNode.style.height = (report[0].offsetHeight+5)+'px';
                     }, 0);
@@ -247,7 +247,7 @@ class Tea {
           downloadTimer = setInterval(countDown,1000)
           function countDown(){
             var ANasRMunDurin = config.lang.countdowntext.replace('{{anascountdown}}', timeleft);
-            $(config.output)[0].innerHTML = '<div class="fs-6 mb-2 text-center">' + ANasRMunDurin + '</div>';    
+            $(config.output)[0].innerHTML = '<div class="fs-6 mb-2 text-center text-success">' + ANasRMunDurin + '</div>';    
         	timeleft -= 1;
             if(timeleft <= 0){
               clearInterval(downloadTimer);
