@@ -194,12 +194,12 @@ class Tea {
                   timeleft -= 1;
                   if(timeleft <= 0){
                     clearInterval(downloadTimer);
-                    report[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
+                    report[0].innerHTML = '<button class="btn btn-primary mb-2">Getlink</button>';
                     if(!config.click2x){
                       report[0].innerHTML = '<div class="text-center"><a href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                     } else {
                       function gotolinkcountdown() {
-                        var o = 4;
+                        var o = 8;
                         $("#gotolink").removeClass("hidden").addClass("mt-2 mb-2");
                         var n = setInterval(function() {
                             var e = o -= 1;
@@ -251,12 +251,12 @@ class Tea {
         	timeleft -= 1;
             if(timeleft <= 0){
               clearInterval(downloadTimer);
-              $(config.output)[0].innerHTML = '<button class="btn btn-success mb-2">Getlink</button>';
+              $(config.output)[0].innerHTML = '<button class="btn btn-primary mb-2">Getlink</button>';
               if(!config.click2x){
                 $(config.output)[0].innerHTML = '<div class="text-center"><a class="text-center" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
               } else {
                 function gotolinkcountdown() {
-                  var o = 4;
+                  var o = 8;
                   $("#gotolink").removeClass("hidden").addClass("mt-2 mb-2");
                   var n = setInterval(function() {
                      var e = o -= 1;
