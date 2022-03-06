@@ -176,7 +176,7 @@ class Tea {
         if (typeof(data) === "object") {
 			if(data.note){$('.decryptbox').append('<div class="alert alert-success">' + data.note + '</div>')};
             if(!data.countdown){
-			  report[0].innerHTML = '<div class="text-center"><a href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
+			  report[0].innerHTML = '<div class="text-center"><a class="btn btn-primary mb-2" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
               $this.find('button, input').attr('disabled', 'disabled');
               $this.slideUp('slow');
             } else {
@@ -196,7 +196,7 @@ class Tea {
                     clearInterval(downloadTimer);
                     report[0].innerHTML = '<button class="btn btn-primary mb-2">Getlink</button>';
                     if(!config.click2x){
-                      report[0].innerHTML = '<div class="text-center"><a href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
+                      report[0].innerHTML = '<div class="text-center"><a class="btn btn-primary mb-2" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                     } else {
                       function gotolinkcountdown() {
                         var o = 8;
