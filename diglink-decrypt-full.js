@@ -41,7 +41,9 @@
             var regexS = "[\\?&]"+name+"=([^&#]*)";
             var regex = new RegExp( regexS );
             var results = regex.exec( url );
+             
             return results == null ? null : results[1];
+       
           }
       }(window,document));
     });
@@ -169,7 +171,7 @@
           passin = $('#passin');
           var data;
           try {
-            data = JSON.parse(Tea.decrypt(decodeURIComponent((_GET('u'))), passin[0].value))
+            data = JSON.parse(Tea.decrypt(decodeURIComponent((_GET('u'))), passin[0].value));window.history.pushState({}, document.title, document.location.pathname);
           } catch (e) {
             data = false;
           }
@@ -234,7 +236,7 @@
         if (_GET('u') && $(config.output).length) {
           var data;
           try {
-              data = JSON.parse(Tea.decrypt(decodeURIComponent((_GET('u'))), config.defaultkey))
+              data = JSON.parse(Tea.decrypt(decodeURIComponent((_GET('u'))), config.defaultkey));window.history.pushState({}, document.title, document.location.pathname);
           } catch (e) {
               data = false;
           }
