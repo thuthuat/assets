@@ -210,7 +210,7 @@
                             }, 1e3)
                             }
                           var request = !1;
-                          $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("#output button").html('Your link is almost ready!<br />Scroll down for destination link'),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                          $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
                         }
                       }
                     }
@@ -267,7 +267,7 @@
                       }, 1e3)
                     }
                     var request = !1;
-                    $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("#output button").html('Your link is almost ready!<br />Scroll down for destination link'),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                    $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 500),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
                   }
                 }
               }                         
